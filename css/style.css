@@ -1,0 +1,183 @@
+:root {
+    --blue: linear-gradient(to right, rgb(0, 255, 225), rgb(38, 0, 255));
+    --orange: linear-gradient(to right, rgb(255, 213, 0), rgb(255, 0, 0));
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: url(/img/bg-pattern-card.svg) no-repeat center;
+    background-size: cover;
+    animation: zoom 20s linear infinite;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.3);
+    }
+}
+
+.card {
+    position: relative;
+    width: 500px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    box-shadow: 0 10px 200px -60px rgba(0, 0, 0, 0.3);
+    border: 2px solid #ffffff40;
+    padding: 3rem;
+    backdrop-filter: blur(5px);
+}
+
+.card img {
+    width: 200Px;
+    height: 200Px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.card .descrp {
+    text-align: center;
+}
+
+.card h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: 900;
+}
+
+.card .descrp div {
+    margin-bottom: 17Px;
+    font-weight: 400;
+}
+
+.card .info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50Px;
+    text-align: center;
+}
+
+.info span:first-child {
+    display: block;
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 10Px;
+    letter-spacing: 3px;
+}
+
+.info span:last-child {
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* gap: 50Px; */
+}
+
+.social a {
+    width: 50px;
+    height: 50px;
+    border-radius: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    margin: 15px;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.social a:hover {
+    transform: translateY(-10px);
+}
+
+.social i {
+    font-size: 1.5rem;
+}
+
+.facebook {
+    background: linear-gradient(to right, rgb(67, 67, 88), rgb(36, 89, 203));
+    box-shadow: 0 4px 15px rgba(0, 0, 255, 0.777);
+}
+
+.twitter {
+    background: linear-gradient(to right, rgb(0, 123, 255), rgb(0, 174, 255));
+    box-shadow: 0 4px 15px rgba(0, 149, 255, 0.714);
+}
+
+.instagram {
+    background: linear-gradient(to right, rgb(102, 0, 255), rgb(255, 0, 136));
+    box-shadow: 0 4px 15px rgba(174, 0, 255, 0.714);
+}
+
+.linkedin {
+    background: linear-gradient(to right, rgb(53, 53, 236), rgb(58, 58, 245));
+    box-shadow: 0 4px 15px rgba(0, 0, 255, 0.714);
+}
+
+.github {
+    background: linear-gradient(to right, rgb(56, 56, 56), rgb(44, 42, 42));
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+}
+
+.action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+button {
+    width: 200px;
+    height: 50px;
+    border-radius: 50px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all .3s ease-in-out;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-position: 100% 0;
+}
+
+.blue {
+    background: var(--blue);
+    background-size: 300% 100%;
+}
+
+.orange {
+    background: var(--orange);
+    background-size: 300% 100%;
+}
